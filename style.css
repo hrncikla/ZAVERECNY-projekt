@@ -1,0 +1,22 @@
+/* intuitivnejsi box-sizing */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    margin: 0;
+}
+.nav{
+    background-color: aqua;
+}
+.header{
+    background-color: red;
+}
+.squares{
+    background-color: yellow;
+}
+.about{
+    background-color: gray;
+}
+.news{
+    background-color: green;
+}
