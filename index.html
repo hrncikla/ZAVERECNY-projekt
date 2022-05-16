@@ -4,39 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+   
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>TJ Čenkovice</h1>
-        <h2>Skiareál a sportovní areál</h2>
+
+<body class="body">
+    <header class="header">
+        <div class="header__rectangle">
+            <img class="header__rectangle-img" src="/images/header-rectangle.svg">
+        </div>
+        <nav class="navbar">
+            <a class="navbar__link" href="#" ><img class="navbar__hamburger" src="/images/hamburger-menu.svg" alt="menu"></a>
+        </nav>
+        <div class="header__text">
+            <h1 class="title title--header">TJ Čenkovice</h1>
+            <h2 class="subtitle subtitle--header">Skiareál a sportovní areál</h2>
+        </div>
+        
+        
     </header>
-    <main>
-        <section>
-        <h2>Aktuality</h2>
-            <div>
-                <h3>Zahájení lyžařské sezóny</h3>
-                <span>1.12. 2021</span>
-                <p>Milí návštěvníci, obleva je za námi, venku opět mrzne a technické zasněžování ...</p>
-                <button>podrobnosti</button>
+    <main class="main">
+        <section class="news">
+        <h2 class="title title--news">Aktuality</h2>
+            <div class="news-article">
+                <h3 class="news-article__title">Zahájení lyžařské sezóny</h3>
+                <span class="news-article__date">1.12. 2021</span>
+                <p class="news-article__text">Milí návštěvníci, obleva je za námi, venku opět mrzne a technické zasněžování ...</p>
+                <div  class="box"><a href="#" class="button button--news-article">podrobnosti</a></div>
             </div>
-            <div>
-                <h3>Slavnostní zakončení sezóny</h3>
-                <span>1.4. 2020</span>
-                <p>Slavnostní zakončení lyžařské sezóny 2019/2020 proběhne v sobotu 1. 4. 2020 na ...</p>
-                <button>podrobnosti</button>
+            <div class="news-article">
+                <h3 class="news-article__title">Slavnostní zakončení sezóny</h3>
+                <span class="news-article__date">1.4. 2020</span>
+                <p class="news-article__text">Slavnostní zakončení lyžařské sezóny 2019/2020 proběhne v sobotu 1. 4. 2020 na ...</p>
+                <div class="box"><a  href="#" class="button button--news-article">podrobnosti</a></div>
             </div>
-            <button>Zobrazit všechny aktuality</button>
+            <a href="#" class="button button--news">Zobrazit všechny aktuality</a>
+        </section>
+        <section class="about-section">
+            <h2 class="title title--blue title--about">O areálu</h2>
+            <div class="about-section__text">
+                <p>Čenkovice jsou malebné horské středisko v  údolí pod Bukovou horou, na rozhraní Orlických hor, Jeseníků a Králického Sněžníku.</p> 
+                <p>Tělovýchovná jednota Čenkovice zde provozuje lyžařský vlek a sportovní areál Na hřišti, kde si můžete v letní sezóně zahrát např. minigolf, tenis, volejbal, stolní tenis či malou kopanou.</p>
+                <p>K provozu sjezdovky využíváme technické zasněžování, osvětlení pro večerní lyžování a rolbu pro úpravu sjezdovky.</p>
+                <a href="#" class="button button--about">Zobrazit více</a>         
+            </div>
+            <div class="about-section__img">
+                <img src="/images/about_us.png" alt="krajina">
+            </div>
+        </section>
+        <section class="where-section">
+            <h2 class="title title--blue title--where">Kudy k nám</h2>
+            <div class="where-section__text">
+                <p>Nabízíme <span class="bold">ZDARMA</span> dopravu k vleku od centrálního parkoviště v Čenkovicích. Stačí pouze zavolat na číslo:  <span class="bold">+420 732 746 094</span></p>
+            </div>
+            <div class="where-section__GPS">
+                <p><span class="bold">GPS souřadnice: 50°0'50.77"N, 16°41'43.59"E</span></p>
+            </div>      
+            <div class="where-section__img">
+                <img src="/images/czech-republic.png">
+            </div>
+        </section>
+        <section class="follow-section">
+            <h2 class="subtitle">Sledujte nás na facebooku!</h2>
+            <a href="#" class="follow-section__link">@tjcenkovice</a>     
+            <p class="follow-section__text">... ať Vám nic neunikne</p>
+        </section>
+        <section class="img-section">
+          
+          <img class="picture" src="/images/landscape.png">
+            
         </section>
     
     </main>
-    <footer>
-        Základní kontakty
-        Skipasy: +420 724 290 022
-        Ubytování: +420 724 290 022
-        © 2012-2022 TJ Čenkovice
+    <footer class="footer">
+        
+        <p>Copyright © 2022, Klára Hrnčířová</p>
+        <p>Designed by <a>Freepik</a></p>
     </footer>
 </body>
 </html>

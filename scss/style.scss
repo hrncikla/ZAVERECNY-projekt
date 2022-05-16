@@ -1,7 +1,230 @@
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
-body {
-    margin: 0;
-    background-color: aqua;
+$primary-color: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
+$background-color: #F7F7F7;
+$light-grey:#E3E3E3;
+$text-color: #000000;
+
+$primary-font:'Roboto', sans-serif;
+$secondary-font: 'Shadows Into Light', cursive;
+
+img{
+    max-width: 100%;
 }
+.body {
+    margin: 0;
+    background-color: $background-color;
+    font-family: $primary-font;
+}
+.main{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+.header{
+    min-height: 650px;
+    background-image: url(/images/e.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -3; 
+    margin: 0;
+
+    &__rectangle{
+        position: relative;
+    }
+    &__rectangle-img{
+        width: 100%;
+        position: absolute;
+        z-index: 1; 
+        top: -30px;position: relative;
+    }   
+    &__text{
+        top: 15%;
+        padding: 30px;
+        position: absolute;
+        z-index: 1;
+    } 
+}
+
+.navbar{
+    top: 0;
+    right: 0;
+    padding: 30px;
+    position: absolute;
+    z-index: 1; 
+}
+
+.title,
+.subtitle{
+    color: white;
+    margin: 5px;
+}
+.title{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+
+    &--blue{
+        color:#4A7C85;
+    }
+    &--news{
+        margin-bottom: 30px;
+    }
+    &--where{
+        text-align: right;
+    }
+    
+}
+.subtitle{
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+.news{
+    background-image: url(/images/news-rectangle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: top left;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 30px;
+
+}
+
+.news-article{
+    background-color: white;
+    color: $text-color;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 20px;
+
+    &__title{
+        margin: 0;
+    }
+    &__date{
+        color: rgb(66, 66, 66);
+       
+    }
+}
+
+.button{
+    background-color: #E3E3E3;
+    padding: 8px 40px;
+    border-radius: 20px;
+    color: #336081;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 3px 3px #888888;
+    
+    &--news{
+       color: white;
+       background-color: #30575e00;
+       border: 3px solid white;
+       box-shadow: 2px 3px 3px #336081;
+       
+    }
+    /*&--news-article::after{
+        content: " ";
+        display: inline-block;
+        background: url("/images/Vector.png") no-repeat;
+        width: 0.5em;
+        margin: 5px;
+        height: 1em;
+        background-size: contain;
+
+    }*/
+    &--about{
+        padding: 15px 40px;
+        background: $primary-color;
+        color: white;
+        font: $primary-font;
+        align-items: center;
+        text-align: center;
+        margin: 5px auto;
+        display: inline-block;
+    }
+    
+}
+.about-section{
+    background-color: $light-grey;
+    margin: 0;
+    padding: 30px;
+    
+
+    &__text{
+        text-align: justify;
+        padding: 10px;
+        
+    }
+    &__img{
+        margin: 30px auto 0 auto;
+        max-width: 350px;
+    }
+}
+.where-section{
+    padding: 30px;
+   
+    &__text{
+        
+        margin-top:30px;
+        text-align: justify;
+        max-width: 400px;
+    }
+    &__img{
+        margin-top:40px;
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.bold{
+    font-weight: bold;
+}
+.follow-section{
+    background: $primary-color;
+    padding: 30px;
+    &__link{
+        display: inline-block;
+        padding-left: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        align-items: center;
+        text-align: right;
+        color: #EBFEDE;
+    }
+    &__text{
+        display: inline-block;
+        padding-left: 20px;
+        font-size: 20px;
+        align-items: center;
+        text-align: right;
+        color: white;
+    }
+}
+.img-section{
+    min-height: 150px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(261.63deg, rgba(235, 254, 222, 0.6) 29.78%, rgba(74, 124, 133, 0.6) 96.2%);;
+}
+
+.picture{
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #4A7C85;
+}
+
