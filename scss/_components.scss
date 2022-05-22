@@ -1,0 +1,134 @@
+@use "variables";
+
+
+// navbar
+
+.navbar{
+    position: relative;
+    &__link{
+        top: 0;
+        right: 0;
+        padding: 50px;
+        position: absolute;
+        z-index: 1;
+    }
+    &__hamburger--blue{
+        display: none;
+    }
+}
+.nav-buttons{
+    display: none;
+}
+
+@media screen and (min-width: 650px) {
+   
+    .navbar__hamburger--blue{
+        display: inline-block;
+        width: 80%;
+    }
+    .navbar__hamburger--white{
+        display: none;
+    }
+    .nav-buttons{
+        display: inline-block;
+        margin: variables.$main-gap;
+    }
+    .button--navbar-sport{
+        display: none;
+    }
+}
+@media screen and (min-width: 710px) {
+
+    .nav-buttons{
+        display: inline-block;
+        align-items: center;
+        display: flex;
+        margin: 0;
+        padding: variables.$main-gap;
+    }
+    .button--navbar{
+        margin-top: 10px;
+    }
+    .button--navbar-sport{
+        display: inline-block;
+        width: 170px;
+        padding: 5px 40px;
+        text-align: center;
+        &:hover{
+            border: none;
+            background: variables.$primary-color;
+            padding: 8px 43px;
+            color: white;
+        }
+    }
+}
+@media screen and (min-width: 1025px){
+    .navbar__link{
+        right: -80px;
+    }
+} 
+// button
+
+.button{
+    background-color: #E3E3E3;
+    padding: 8px 40px;
+    border-radius: 20px;
+    color: #336081;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 3px 3px #888888;
+    
+    &--navbar{
+        border: 3px solid #336081;
+        margin-left: 10px;
+        background-color: variables.$background-color;
+        font-size: 20px;
+        box-shadow: 2px 3px 3px #88888879;
+        padding: 15px 40px;
+        border-radius: 40px;
+        
+
+    }
+    &--navbar:hover{
+        border: none;
+        background: variables.$primary-color;
+        padding: 15px 43px;
+        color: white;
+        
+        
+
+    }
+    &--news{
+       color: white;
+       background-color: #30575e00;
+       border: 3px solid white;
+       box-shadow: 2px 3px 3px #336081;
+       margin-top: 20px;
+    }
+    &--news:hover{
+        background-color: variables.$primary-color;
+        color: white;
+    }
+   
+    
+    &--about{
+        background: #E3E3E3;
+        padding: 12px 37px;
+        border: 3px solid #4A7C85;
+        color: #4A7C85;
+        font: variables.$primary-font;
+        
+        align-items: center;
+        text-align: center;
+        margin: 5px auto;
+        display: inline-block;
+    }
+    &--about:hover{
+       
+        border: none;
+        padding: 15px 40px;
+        background: variables.$primary-color;
+        color: white;
+    }
+    
+}

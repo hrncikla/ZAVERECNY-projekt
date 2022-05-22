@@ -14,70 +14,102 @@
 
 <body class="body">
     <header class="header">
-        <div class="header__rectangle">
-            <img class="header__rectangle-img" src="/images/header-rectangle.svg">
-        </div>
         <nav class="navbar">
-            <a class="navbar__link" href="#" ><img class="navbar__hamburger" src="/images/hamburger-menu.svg" alt="menu"></a>
+                <a class="navbar__link" href="#" >
+                    <img class="navbar__hamburger navbar__hamburger--white" src="/images/hamburger-menu.svg" alt="menu">
+                    <img class="navbar__hamburger navbar__hamburger--blue" src="/images/hamburger-menu-blue.svg" alt="menu">
+                </a>
+                <div class="nav-buttons">
+                    <a class="button--navbar button" href="#">Skiareál</a>
+                    <a class="button--navbar button--navbar-sport button" href="#">Sportovní areál</a>
+                    <a class="button--navbar button" href="#">Kontakt</a>
+                </div>
         </nav>
-        <div class="header__text">
-            <h1 class="title title--header">TJ Čenkovice</h1>
-            <h2 class="subtitle subtitle--header">Skiareál a sportovní areál</h2>
-        </div>
         
-        
-    </header>
-    <main class="main">
-        <section class="news">
-        <h2 class="title title--news">Aktuality</h2>
-            <div class="news-article">
-                <h3 class="news-article__title">Zahájení lyžařské sezóny</h3>
-                <span class="news-article__date">1.12. 2021</span>
-                <p class="news-article__text">Milí návštěvníci, obleva je za námi, venku opět mrzne a technické zasněžování ...</p>
-                <div  class="box"><a href="#" class="button button--news-article">podrobnosti</a></div>
+            <div class="header__text">
+                <h1 class="title title--header">TJ Čenkovice</h1>
+                <h2 class="subtitle subtitle--header">Skiareál a sportovní areál</h2>
             </div>
-            <div class="news-article">
-                <h3 class="news-article__title">Slavnostní zakončení sezóny</h3>
-                <span class="news-article__date">1.4. 2020</span>
-                <p class="news-article__text">Slavnostní zakončení lyžařské sezóny 2019/2020 proběhne v sobotu 1. 4. 2020 na ...</p>
-                <div class="box"><a  href="#" class="button button--news-article">podrobnosti</a></div>
-            </div>
-            <a href="#" class="button button--news">Zobrazit všechny aktuality</a>
-        </section>
-        <section class="about-section">
-            <h2 class="title title--blue title--about">O areálu</h2>
-            <div class="about-section__text">
-                <p>Čenkovice jsou malebné horské středisko v  údolí pod Bukovou horou, na rozhraní Orlických hor, Jeseníků a Králického Sněžníku.</p> 
-                <p>Tělovýchovná jednota Čenkovice zde provozuje lyžařský vlek a sportovní areál Na hřišti, kde si můžete v letní sezóně zahrát např. minigolf, tenis, volejbal, stolní tenis či malou kopanou.</p>
-                <p>K provozu sjezdovky využíváme technické zasněžování, osvětlení pro večerní lyžování a rolbu pro úpravu sjezdovky.</p>
-                <a href="#" class="button button--about">Zobrazit více</a>         
-            </div>
-            <div class="about-section__img">
-                <img src="/images/about_us.png" alt="krajina">
-            </div>
-        </section>
-        <section class="where-section">
-            <h2 class="title title--blue title--where">Kudy k nám</h2>
-            <div class="where-section__text">
-                <p>Nabízíme <span class="bold">ZDARMA</span> dopravu k vleku od centrálního parkoviště v Čenkovicích. Stačí pouze zavolat na číslo:  <span class="bold">+420 732 746 094</span></p>
-            </div>
-            <div class="where-section__GPS">
-                <p><span class="bold">GPS souřadnice: 50°0'50.77"N, 16°41'43.59"E</span></p>
-            </div>      
-            <div class="where-section__img">
-                <img src="/images/czech-republic.png">
-            </div>
-        </section>
-        <section class="follow-section">
-            <h2 class="subtitle">Sledujte nás na facebooku!</h2>
-            <a href="#" class="follow-section__link">@tjcenkovice</a>     
-            <p class="follow-section__text">... ať Vám nic neunikne</p>
-        </section>
-        <section class="img-section">
-          
-          <img class="picture" src="/images/landscape.png">
             
+            <div class="header__div-picture">
+                <img class="header__picture" src="/images/header-img-tablet.svg">
+            </div>
+            
+    </header>
+        
+    <main class="main">
+        <div class=" PC-max-width--news">
+        <section class="news">
+            <div class=" PC-max-width">
+                <h2 class="title title--news">Aktuality</h2>
+                <div class="news__content">
+                    <div class="flex-container flex-container--news">
+                        <div class="news-article">
+                            <h3 class="news-article__title">Zahájení lyžařské sezóny</h3>
+                            <span class="news-article__date">1.12. 2021</span>
+                            <p class="news-article__text">Milí návštěvníci, obleva je za námi, venku opět mrzne a technické zasněžování ...</p>
+                            <div  class="box"><a href="#" class="button button--news-article">podrobnosti</a></div>
+                        </div>
+                        <div class="news-article">
+                            <h3 class="news-article__title">Slavnostní zakončení sezóny</h3>
+                            <span class="news-article__date">1.4. 2020</span>
+                            <p class="news-article__text">Slavnostní zakončení lyžařské sezóny 2019/2020 proběhne v sobotu 1. 4. 2020 na ...</p>
+                            <div class="box"><a  href="#" class="button button--news-article">podrobnosti</a></div>
+                        </div>
+                    </div>
+                    <div class="box" ><a href="#" class="button button--news">Zobrazit všechny aktuality</a></div>
+                </div>
+            </div>
+            </section>
+        </div>
+        <section class="about section">
+            <div class="PC-max-width">
+                <h2 class="title title--blue title--about">O areálu</h2>
+                <div class="flex-container">
+                    <div class="about__text">
+                        <p>Čenkovice jsou malebné horské středisko v  údolí pod Bukovou horou, na rozhraní Orlických hor, Jeseníků a Králického Sněžníku.</p> 
+                        <p>Tělovýchovná jednota Čenkovice zde provozuje lyžařský vlek a sportovní areál Na hřišti, kde si můžete v letní sezóně zahrát např. minigolf, tenis, volejbal, stolní tenis či malou kopanou.</p>
+                        <p>K provozu sjezdovky využíváme technické zasněžování, osvětlení pro večerní lyžování a rolbu pro úpravu sjezdovky.</p>
+                        <a href="#" class="button button--about">Zobrazit více</a>         
+                    </div>
+                    <div class="about__div-img">
+                        <img class="about__img" src="/images/about_us.png" alt="krajina">
+                    </div>
+                </div>
+            </div>
         </section>
+        <section class="where section">
+            <div class="PC-max-width">
+                <h2 class="title title--blue title--where">Kudy k nám</h2>
+                <div class="where__text">
+                    <p>Nabízíme <span class="bold">ZDARMA</span> dopravu k vleku od centrálního parkoviště v Čenkovicích. Stačí pouze zavolat na číslo:  <span class="bold">+420 732 746 094</span></p>
+                </div>
+                <div class="where__GPS">
+                    <p><span class="bold">GPS souřadnice: 50°0'50.77"N, 16°41'43.59"E</span></p>
+                </div>      
+                <div class="where__img">
+                    <img src="/images/czech-republic.png">
+                </div>
+            </div>
+        </section>
+        <section class="follow section">
+            <div class="PC-max-width">
+                <h2 class="subtitle">Sledujte nás na facebooku!</h2>
+                <a href="#" class="follow__link">@tjcenkovice</a>     
+                <p class="follow__text">... ať Vám nic neunikne</p>
+           </div>
+        </section>
+        <div class="blue">
+
+        
+            <div class="PC-max-width PC-max-width--img-section">
+                <section class="img-section">
+                
+                <img class="img-section__img" src="/images/landscape.png">
+                    
+                </section>
+            </div>
+        </div>
     
     </main>
     <footer class="footer">
