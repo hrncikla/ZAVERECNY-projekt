@@ -48,6 +48,12 @@ img{
     &--where{
         text-align: right;
     }
+    &--clicker{
+        color: #EBFEDE;
+    }
+    &--text-banner{
+        color:#4A7C85;
+    }
 }
 
 .subtitle{
@@ -59,6 +65,8 @@ img{
     font-weight: 400;
     font-size: 30px;
     line-height: 48px;
+
+    
 }
 
 @media screen and (max-width: 425px) {
@@ -108,4 +116,5 @@ img{
         font-size: 50px;
         margin-top: 20px;
     }
+   
 }

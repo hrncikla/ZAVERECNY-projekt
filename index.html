@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <title>Document</title>
+    <title>TJ Čenkovice</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,33 @@
 </head>
 
 <body class="body">
+
+    
+    
     <header class="header">
         <nav class="navbar">
-                <a class="navbar__link" href="#" >
+                <!--<a class="navbar__link" href="#" >
                     <img class="navbar__hamburger navbar__hamburger--white" src="/images/hamburger-menu.svg" alt="menu">
                     <img class="navbar__hamburger navbar__hamburger--blue" src="/images/hamburger-menu-blue.svg" alt="menu">
-                </a>
+                </a>-->
+                <span onclick="openNavbar()">
+                    <div class = "navbar-icon">
+                        <div class = "navbar-icon__line"></div>
+                        <div class = "navbar-icon__line"></div>
+                        <div class = "navbar-icon__line"></div>
+                    </div>
+                </span>
+                <div id="sideNavbar" class="side-navbar">
+                    <a  class="side-navbar__link" href="javascript:void(0)" class="close-icon" onclick="closeNavbar()">&times;</a>
+                    <a  class="side-navbar__link" href="#">Úvod</a>
+                    <a  class="side-navbar__link" href="/cenik">Skiareál</a>
+                    <a  class="side-navbar__link" href="#">Sportovní areál</a>
+                    <a  class="side-navbar__link" href="#">Kontakt</a>
+                </div>
+                
+                
                 <div class="nav-buttons">
-                    <a class="button--navbar button" href="#">Skiareál</a>
+                    <a class="button--navbar button" href="/cenik">Skiareál</a>
                     <a class="button--navbar button--navbar-sport button" href="#">Sportovní areál</a>
                     <a class="button--navbar button" href="#">Kontakt</a>
                 </div>
@@ -97,7 +116,7 @@
                 <h2 class="subtitle">Sledujte nás na facebooku!</h2>
                 <a href="#" class="follow__link">@tjcenkovice</a>     
                 <p class="follow__text">... ať Vám nic neunikne</p>
-           </div>
+        </div>
         </section>
         <div class="blue">
 
@@ -117,5 +136,17 @@
         <p>Copyright © 2022, Klára Hrnčířová</p>
         <p>Designed by <a>Freepik</a></p>
     </footer>
+    
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNavbar() {
+        document.getElementById("sideNavbar").style.width = "450px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNavbar() {
+        document.getElementById("sideNavbar").style.width = "0";
+        }
+    </script>
 </body>
 </html>
