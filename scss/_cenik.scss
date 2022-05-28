@@ -23,11 +23,15 @@
     padding: 0px;
     text-align: left;
     font-weight: 400;
-    &__text--important{
-        font-weight: 500;
-        color: #4A7C85;
-        padding-top: 20px;
-    }
+    
+}
+.important{
+    font-weight: 500;
+    color: #4A7C85;
+    padding-top: 20px;
+}
+.important + .important{
+    padding-top: 5px;
 }
 .table-banner{
     flex:3;

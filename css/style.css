@@ -167,7 +167,7 @@ img {
 }
 .button--about:hover {
   border: none;
-  padding: 15px 40px;
+  padding: 14.4px 39.4px;
   background: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
   color: white;
 }
@@ -556,10 +556,15 @@ img {
   text-align: left;
   font-weight: 400;
 }
-.text-banner__text--important {
+
+.important {
   font-weight: 500;
   color: #4A7C85;
   padding-top: 20px;
+}
+
+.important + .important {
+  padding-top: 5px;
 }
 
 .table-banner {
@@ -783,6 +788,188 @@ img {
   }
   .table--last {
     flex-basis: 70%;
+  }
+}
+.body--skiareal {
+  background-color: #F7F7F7;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.food {
+  background: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
+  color: white;
+  padding: 60px 0;
+}
+
+.about__left {
+  flex-basis: 40%;
+}
+
+.about__right {
+  max-width: 450px;
+  flex-basis: 50%;
+}
+
+.flex-container--skiareal {
+  justify-content: space-between;
+}
+
+.table--skiareal {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
+  color: white;
+  box-shadow: 3px 3px 5px rgba(110, 110, 110, 0.5921568627);
+  text-align: right;
+}
+.table--skiareal:hover {
+  background: #336081;
+  color: #EBFEDE;
+}
+
+.table__column--skiareal {
+  padding: 5px 10px;
+  width: 200px;
+}
+
+.table__column--border {
+  border-right: 3px solid white;
+}
+
+.flex-container__left {
+  margin: 40px;
+  text-align: justify;
+}
+
+.slide-container {
+  position: relative;
+  width: 500px;
+  max-height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.previous, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: rgba(67, 67, 67, 0.438);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, .next:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 15px;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery__item {
+  transition: 0.3s;
+}
+.gallery__item:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.gallery__item--5 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.gallery__item--10 {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 850px) {
+  .flex-container--skiareal {
+    flex-direction: column;
+  }
+
+  .about__right {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .table--skiareal {
+    flex-basis: 45%;
+  }
+
+  .button--skiareal {
+    justify-self: stretch;
+    margin: 0;
   }
 }
 .header {
