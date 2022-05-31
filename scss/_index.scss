@@ -1,6 +1,6 @@
 @use "variables";
 
-// news section
+// News section --------------------------------
 .news{
     background-image: url(/images/news-rectangle.svg);
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@
     }
 }
 
-// about section 
+// About section -----------------------------------
 .about{
     background-color: variables.$light-grey;
     margin: 0;
@@ -43,7 +43,7 @@
     }
 }
 
-// where section
+// Where section ----------------------------------------
 
 .where{
     &__text{
@@ -59,7 +59,8 @@
     }
 }
 
-// follow section
+
+// Follow section ------------------------------
 
 .follow{
     background: variables.$primary-color;
@@ -82,7 +83,7 @@
     }
 }
 
-//img section
+// Img section ----------------------------------
 .img-section{
     min-height: 150px;
     overflow: hidden;
@@ -96,6 +97,8 @@
         z-index: -1;
     }
 }
+
+// Media ---------------------------------------
 
 @media screen and (min-width: 650px) {
    
@@ -193,8 +196,26 @@
       margin-right: auto;
       margin-left: auto;
     }
+    .flex-container--where{
+        display: flex;
+    }
     .where{
+        text-align: right;
         background-image: none;
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        
+        &__text{
+            margin-left: auto;
+            max-width: 400px;
+        }
+        &__img{
+            margin-top:40px;
+            max-width: 500px;
+            display: inline-block;
+            order: -1;
+        }
     }
     .follow{
         padding-left: 100px;

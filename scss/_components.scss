@@ -19,6 +19,7 @@
         box-shadow: 2px 3px 3px #88888879;
         padding: 15px 40px;
         border-radius: 40px;
+        cursor: pointer;
         
 
     }
@@ -37,13 +38,29 @@
        border: 3px solid white;
        box-shadow: 2px 3px 3px #336081;
        margin-top: 20px;
+       transition: 0.1s;
     }
     &--news:hover{
         background-color: variables.$primary-color;
-        color: white;
+        color: variables.$important-color;
     }
-   
-    
+    &--news-article{
+        opacity: 0.8;
+        transition: 0.2s;
+        padding: 8px 36px  8px 40px;
+    }
+    &--news-article:hover{
+        opacity: 1; 
+    }
+    &--news::after,
+    &--news-article::after{
+        content: '\00bb';
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 1.2em;
+        transition: 0.5s;
+        opacity: 1;
+    }
     &--about{
         background: #E3E3E3;
         padding: 12px 37px;
@@ -61,8 +78,70 @@
         background: variables.$primary-color;
         color: white;
     }
-    
-       
+    &--arrow{
+        border: 3px solid #336081;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: variables.$background-color;
+        font-size: 20px;
+        box-shadow: 2px 3px 3px #88888879;
+        padding: 15px 25px 15px 40px;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+    &--arrow:hover{
+        border: none;
+        background: variables.$primary-color;
+        padding: 18px 28px 18px 43px;
+        color: white;
+    }  
+    &--arrow::after{
+        content: '\00bb';
+        transform: rotate(0.25turn);
+        display: inline-block;
+        margin-left: 15px;
+        font-size: 1em;
+        transition: 0.5s;
+    }
+}
+
+
+// Dropdown button
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    margin-left: 33px;
+    width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content__link {
+    color:  variables.$blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+.dropdown-content__link:hover {
+    background-color: rgb(228, 228, 228);
+    padding: 12px 18px;
+    border-left: 3px solid variables.$light-blue ;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .button--arrow {
+    border: none;
+    background: variables.$primary-color;
+    padding: 18px 28px 18px 43px;
+    color: white;
 }
 // navbar
 
@@ -88,22 +167,18 @@
 .nav-buttons{
     display: none;
 }
-
-
 .side-navbar {
     height: 100%; 
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0; 
     position: fixed; 
     z-index: 1; 
     top: 0; 
     right: 0;
     background: variables.$primary-color; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 50px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden;
+    padding-top: 50px; 
+    transition: 0.5s; 
 }
-  
-/* The navigation menu links */
 .side-navbar__link {
     padding: 8px 8px 8px 42px;
     text-decoration: none;
@@ -113,21 +188,20 @@
     color: variables.$light-grey;
     display: block;
     transition: 0.3s;
-    
+    &--margintop{
+        margin-top: 50px;
+    }
 }
-
 .side-navbar__link:hover {
     color: #EBFEDE;
     padding: 8px 8px 8px 44px;
 }
-  
-/* Position and style the close button (top right corner) */
 .close-icon {
-    //position: absolute;
+    position: absolute;
     top: 0;
     right: 0;
-    font-size: 150px;
-    margin-left: 50px;
+    font-size: 50px;
+    margin: 30px 50px;
 }
   
   
@@ -177,9 +251,220 @@
         }
     }
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 900px) {
     .navbar-icon{
-       padding: 40px 10px;
-        
+        display: none;
     }
 }
+
+
+// Important message section --------------------------------------------------------------------
+
+.message{
+    background-color: #EBFEDE;
+    color: #336081;
+  
+    &__content{
+      text-align: center; 
+    }
+    &__title{
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    &__text{
+      font-weight: 400;
+      margin-top: 8px;
+      
+    }
+}
+@media screen and (max-width: 790px){
+    .message{
+        &__title{
+            font-size: 20px;
+        }
+    }
+}
+  
+// Slideshow galerie -----------------------------------------------------------
+
+.slide-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+.slide {
+    display: none;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.previous, 
+.next {
+    background-color: rgba(67, 67, 67, 0.438);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.previous:hover, .next:hover {
+    background-color: rgba(33, 33, 33, 0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+// Grid gallery --------------------------------------------------------------
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 15px;
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__item{
+        transition: 0.3s;
+    }
+    &__item:hover{
+        cursor:pointer ;
+        opacity: 0.5;
+    }
+    &__item--5{
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    &__item--10{
+        grid-row: span 2;
+    }
+}
+@media screen and (max-width: 790px){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item--15{
+            grid-row: span 2;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .gallery{
+        grid-template-columns: repeat(1, 1fr);
+
+        &__item--15{
+            grid-row: span 2;
+        }
+        &__item--5{
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+        &__item--10{
+            grid-row: span 2;
+        }
+    }
+}
+
+// Modal window ---------------------------------------------------------------
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(41, 41, 41);
+}  
+.modal__content {
+    position: relative;
+    background-color: #1d1d1dc4;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 1100px;
+    max-height: 700px;
+}
+.close--modal {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: 200;
+    transition: 0.2s ease;
+}
+.close--modal:hover,
+.close--modal:focus {
+    color:  variables.$light-blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal__slide {
+    display: none;
+    margin: 30px auto;
+    max-width: 1100px;
+    height: 600px;
+    object-fit: contain;
+}
+.previous--modal,
+.next--modal{
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next--modal {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.previous--modal:hover,
+.next--modal:hover {
+    background-color: #4a7c85d5;
+}
+.low-opacity {
+    opacity: 0.6;
+}
+.active,
+.low-opacity:hover {
+    opacity: 1;
+}
+  

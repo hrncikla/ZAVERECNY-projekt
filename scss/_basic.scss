@@ -2,9 +2,26 @@
 
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
-/*-----------------------------------------------*/
 
-// img, body
+// Others ----------------------------------------------
+.phone-only{
+    display: block;
+}
+.phone-no{
+    display: none;
+}
+
+// Animation ----------------------------------------------
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+// Img, body, main, section --------------------------------------------------
 img{
     max-width: 100%;
 }
@@ -23,12 +40,20 @@ img{
 }
 
 
-// font weight-bold
+// Text styles ----------------------------------------------------------------
 .bold{
     font-weight: bold;
 }
+.important{
+    font-weight: 500;
+    color: #4A7C85;
+    padding-top: 20px;
+}
+.important + .important{
+    padding-top: 5px;
+}
 
-// title, subtitle
+// Title, subtitle --------------------------------------------------------------
 .title{
     color: white;
     margin: 5px;
@@ -54,8 +79,14 @@ img{
     &--text-banner{
         color:#4A7C85;
     }
+    &--price{
+        font-size: 60px;
+    }
+    &--table{
+        flex-basis: 21%;
+        font-size: 40px;
+    }
 }
-
 .subtitle{
     color: white;
     margin: 5px;
@@ -66,7 +97,9 @@ img{
     font-size: 30px;
     line-height: 48px;
 
-    
+    &--price{
+        font-size: 50px;
+    }
 }
 
 @media screen and (max-width: 425px) {

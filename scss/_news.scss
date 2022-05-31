@@ -1,0 +1,26 @@
+@use "variables";
+@use "basic";
+@use "components";
+
+
+// Big-news section --------------------------------
+.big-news{
+    background: variables.$primary-color;
+    padding-top: 60px;
+
+    &__container{
+        display: grid;
+    }
+
+}
+.news-article--big{
+    max-width: 700px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 710px){
+    .news-article--big{
+        max-width: 700px;
+    }
+}
+

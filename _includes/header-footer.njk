@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="navbar">
+                <span onclick="openNavbar()">
+                    <div class = "navbar-icon">
+                        <div class = "navbar-icon__line"></div>
+                        <div class = "navbar-icon__line"></div>
+                        <div class = "navbar-icon__line"></div>
+                    </div>
+                </span>
+                <div id="sideNavbar" class="side-navbar">
+                    <a  class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">&times;</a>
+                    <a  class="side-navbar__link side-navbar__link--margintop" href="/">Úvod</a>
+                    <a  class="side-navbar__link" href="/skiareal">Skiareál</a>
+                    <a  class="side-navbar__link" href="/cenik">Ceník</a>
+                    <a  class="side-navbar__link" href="/sportovni-areal">Sportovní areál</a>
+                    <a  class="side-navbar__link" href="#">Kontakt</a>
+                </div>
+        
+                <div class="nav-buttons">
+                    <div class="dropdown">
+                        <a class="button button--arrow">Skiareál</a>
+                        <div class="dropdown-content">
+                          <a class="dropdown-content__link" href="/">Úvod</a>
+                          <a class="dropdown-content__link" href="/skiareal">O areálu</a>
+                          <a class="dropdown-content__link" href="/cenik">Ceník</a>
+                          <a class="dropdown-content__link" href="/aktuality">Aktuality</a>
+                        </div>
+                    </div>
+                    <a class="button--navbar button--navbar-sport button" href="/sportovni-areal">Sportovní areál</a>
+                    <a class="button--navbar button" href="/kontakt">Kontakt</a>
+                </div>
+        </nav>
+        
+            <div class="header__text">
+                <h1 class="title title--header">{{h1}}</h1>
+                <h2 class="subtitle subtitle--header">{{h2}}</h2>
+            </div>
+            
+            <div class="header__div-picture">
+                <img class="header__picture" src="/images/header-img-tablet.svg">
+            </div>      
+    </header>     
+    <main class="main"> 
+        {{ content | safe }}
+    </main>
+    <footer class="footer">
+        <p>Copyright © 2022, Klára Hrnčířová</p>
+        <p>Designed by <a>Freepik</a></p>
+    </footer>
+    <script>
+        function openNavbar() {
+            document.getElementById("sideNavbar").style.width = "350px";
+        }
+        function closeNavbar() {
+            document.getElementById("sideNavbar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

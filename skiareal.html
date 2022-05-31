@@ -1,53 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skiareál</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-</head>
-<body class="body--skiareal">
+---
+layout: header-footer.njk
+title: TJ Čenkovice
+h1: TJ Čenkovice
+h2: Sjezdovka a vlek
+---
 
-    <header class="header">
-        <nav class="navbar">
-                <span onclick="openNavbar()">
-                    <div class = "navbar-icon">
-                        <div class = "navbar-icon__line"></div>
-                        <div class = "navbar-icon__line"></div>
-                        <div class = "navbar-icon__line"></div>
-                    </div>
-                </span>
-                <div id="sideNavbar" class="side-navbar">
-                    <a  class="side-navbar__link" href="javascript:void(0)" class="close-icon" onclick="closeNavbar()">&times;</a>
-                    <a  class="side-navbar__link" href="#">Úvod</a>
-                    <a  class="side-navbar__link" href="/cenik">Skiareál</a>
-                    <a  class="side-navbar__link" href="#">Sportovní areál</a>
-                    <a  class="side-navbar__link" href="#">Kontakt</a>
-                </div>
-                
-                
-                <div class="nav-buttons">
-                    <a class="button--navbar button" href="/skiareal.html">Skiareál</a>
-                    <a class="button--navbar button--navbar-sport button" href="#">Sportovní areál</a>
-                    <a class="button--navbar button" href="#">Kontakt</a>
-                </div>
-        </nav>
-        
-            <div class="header__text">
-                <h1 class="title title--header">TJ Čenkovice</h1>
-                <h2 class="subtitle subtitle--header">Sjezdovka a vlek</h2>
-            </div>
-            
-            <div class="header__div-picture">
-                <img class="header__picture" src="/images/header-img-tablet.svg">
-            </div>
-            
-    </header>
-    <main>
         <section class="about section">
             <div class="PC-max-width">
                 <h2 class="title title--blue title--about">O areálu</h2>
@@ -58,33 +15,36 @@
                         <p>K provozu sjezdovky využíváme technické zasněžování, osvětlení pro večerní lyžování a rolbu pro úpravu sjezdovky.</p>    
                         <p class="important">PROVOZNÍ DOBA SKIAREÁLU:<br> pondělí - neděle, od 8:30 – 16:00 hodin</p> 
                         <p class="important">VEČERNÍ LYŽOVÁNÍ:<br>úterý - sobota, 17:30 - 21:00 hodin</p>
+                        <p class="important">PROVOZNÍ DOBA SPORTOVNÍHO AREÁLU:<br>pondělí - pátek, 10:00 - 22:00 hodin<br>sobota, 10:00 - 23:00 hodin<br>neděle, 10:00 - 21:00 hodin</p>
                        
                     </div>
                     <div class="about__right">
-                        <table class="table table--skiareal">
-                            <tr class="table_row table_row--skiareal"> 
-                                <th class="table__column table__column--skiareal">Obtížnost sjezdovky</th> 
-                                <th class="table__column table__column--skiareal">Délka sjezdovky</th> 
-                                <th class="table__column table__column--skiareal">Převýšení sjezdovky</th>
-                            </tr>
-                            <tr class=" table_row table_row--skiareal">
-                                <td class="table__column table__column--skiareal table__column--border">začátečník</td>
-                                <td class="table__column table__column--skiareal table__column--border">400 metrů</td>
-                                <td class="table__column table__column--skiareal">100 metrů</td>                                  
-                            </tr>
-                        </table>
-                        <table class="table  table--skiareal">
-                            <tr class=" table__row table_row--skiareal"> 
-                                <th class="table__column table__column--skiareal">Typ vleku</th> 
-                                <th class="table__column table__column--skiareal">Délka vleku</th> 
-                                <th class="table__column table__column--skiareal">Přepraví kapacita</th>
-                            </tr>
-                            <tr class="table_row table_row--skiareal">
-                                <td class="table__column table__column--skiareal table__column--border">Malá Poma</td>
-                                <td class="table__column table__column--skiareal table__column--border">396 metrů</td>
-                                <td class="table__column table__column--skiareal">510 osob/hod</td>                                  
-                            </tr>
-                        </table>
+                        <div class="about__table">
+                            <table class="table table--skiareal">
+                                <tr class="table_row table_row--skiareal"> 
+                                    <th class="table__column table__column--skiareal">Obtížnost sjezdovky</th> 
+                                    <th class="table__column table__column--skiareal">Délka sjezdovky</th> 
+                                    <th class="table__column table__column--skiareal">Převýšení sjezdovky</th>
+                                </tr>
+                                <tr class=" table_row table_row--skiareal">
+                                    <td class="table__column table__column--skiareal table__column--border">začátečník</td>
+                                    <td class="table__column table__column--skiareal table__column--border">400 metrů</td>
+                                    <td class="table__column table__column--skiareal">100 metrů</td>                                  
+                                </tr>
+                            </table>
+                            <table class="table  table--skiareal">
+                                <tr class=" table__row table_row--skiareal"> 
+                                    <th class="table__column table__column--skiareal">Typ vleku</th> 
+                                    <th class="table__column table__column--skiareal">Délka vleku</th> 
+                                    <th class="table__column table__column--skiareal">Přepraví kapacita</th>
+                                </tr>
+                                <tr class="table_row table_row--skiareal">
+                                    <td class="table__column table__column--skiareal table__column--border">Malá Poma</td>
+                                    <td class="table__column table__column--skiareal table__column--border">396 metrů</td>
+                                    <td class="table__column table__column--skiareal">510 osob/hod</td>                                  
+                                </tr>
+                            </table>
+                        </div>
                         <a href="/cenik" class="button button--about button--skiareal">Zobrazit ceník</a>
                            
                                  
@@ -93,12 +53,28 @@
                 </div>
             </div>
         </section>
+        <section class="message section">
+            <div class="PC-max-width">
+                <div class="message__content">
+                    <h3 class="message__title">Lyžařský vlek TJ Čenkovice v neděli 20.3.2022 KONČÍ PROVOZ</h3>
+                    <p class="message__text">Děkujeme a těšíme se na Vás v lyžařské sezóně 2022/2023</p>
+                </div>
+            </div>
+        </section>
         <section class="food section">
             <div class="PC-max-width">
                 
-                <div class="flex-container">
+                <div class="flex-container flex-container--food">
                     
-                    <div class="flex-container__right">
+                    <div class="flex-container__right flex-container__right--food">
+                        <h2 class="title">Občerstvení</h2>
+                        <p>Nabízíme rychlé občerstvení v zakrytém prostoru s posezením přímo u sjezdovky. Můžete si zde dát něco dobrého k jídlu i k pití.</p> 
+                        <p>Bufet je otevřen v době provozu vleku.</p>
+                        <p>V nabídce najdete široký výběr slaných a sladkých pochoutek, alkoholických a nealkoholických nápojů.</p>
+                        <p>V nabídce nechybí také teplá jídla dle aktuální nabídky. Dejte si párek v rohlíku, sladkou palačinku či něco na zahřátí a hurá zpátky na svah!</p>    
+                    </div>
+                    <div class="flex-container__left">
+
                         <div class="slide-container">
                             <div class="slide fade">
                               <div class="slide_div-img"><img class="slide_img" src="/images/obcerstveni.jpg"></div>
@@ -120,12 +96,7 @@
                             <span class="dot" onclick="currentSlide(2)"></span>
                             <span class="dot" onclick="currentSlide(3)"></span>
                         </div>       
-                    </div>
-                    <div class="flex-container__left">
-                        <h2 class="title">Občerstvení</h2>
-                        <p>Čenkovice jsou malebné horské středisko v  údolí pod Bukovou horou, na rozhraní Orlických hor, Jeseníků a Králického Sněžníku.</p> 
-                        <p>Tělovýchovná jednota Čenkovice zde provozuje lyžařský vlek a sportovní areál Na hřišti, kde si můžete v letní sezóně zahrát např. minigolf, tenis, volejbal, stolní tenis či malou kopanou.</p>
-                        <p>K provozu sjezdovky využíváme technické zasněžování, osvětlení pro večerní lyžování a rolbu pro úpravu sjezdovky.</p>       
+            
                     </div>
                 </div>
 
@@ -135,121 +106,210 @@
         
         <section class="main-gallery section">
             <div class="PC-max-width">
+                <!-- grid galery -->
                 <div class="gallery">
                     <div class="gallery__item gallery__item--1">
-                        <img class="gallery__img" src="/images/budova.jpg">
+                        <img onclick="openModal();current(1)" class="gallery__img" src="/images/budova.jpg">
                     </div>
                     <div class="gallery__item gallery__item--2">
-                        <img class="gallery__img" src="/images/rolba.jpg">
+                        <img onclick="openModal();current(2)" class="gallery__img" src="/images/rolba.jpg">
                     </div>
                     <div class="gallery__item gallery__item--3">
-                        <img class="gallery__img" src="/images/vlek.jpg">
+                        <img onclick="openModal();current(3)" class="gallery__img" src="/images/vlek.jpg">
                     </div>
-
                     <div class="gallery__item gallery__item--4">
-                        <img class="gallery__img" src="/images/krajina01.jpg">
-                    </div>
-                    
+                        <img onclick="openModal();current(4)" class="gallery__img" src="/images/krajina01.jpg">
+                    </div>      
                     <div class="gallery__item gallery__item--5">
-                        <img class="gallery__img" src="/images/krajina04.jpg">
+                        <img onclick="openModal();current(5)" class="gallery__img" src="/images/krajina04.jpg">
                     </div>
                     <div class="gallery__item gallery__item--6">
-                        <img class="gallery__img" src="/images/zepredu.jpg">
+                        <img onclick="openModal();current(6)" class="gallery__img" src="/images/zepredu.jpg">
                     </div>
-
                     <div class="gallery__item gallery__item--7">
-                        <img class="gallery__img" src="/images/lyze.jpg">
+                        <img onclick="openModal();current(7)" class="gallery__img" src="/images/lyze.jpg">
                     </div>
                     <div class="gallery__item gallery__item--8">
-                        <img class="gallery__img" src="/images/obcerstveni.jpg">
+                        <img onclick="openModal();current(8)" class="gallery__img" src="/images/obcerstveni.jpg">
                     </div>
                     <div class="gallery__item gallery__item--9">
-                        <img class="gallery__img" src="/images/sloup.jpg">
+                        <img onclick="openModal();current(9)" class="gallery__img" src="/images/sloup.jpg">
                     </div>
-
                     <div class="gallery__item gallery__item--10">
-                        <img class="gallery__img" src="/images/auto01.jpg">
+                        <img onclick="openModal();current(10)" class="gallery__img" src="/images/auto01.jpg">
                     </div>
                     <div class="gallery__item gallery__item--11">
-                        <img class="gallery__img" src="/images/krajina03.jpg">
+                        <img onclick="openModal();current(11)" class="gallery__img" src="/images/krajina03.jpg">
                     </div>
                     <div class="gallery__item gallery__item--12">
-                        <img class="gallery__img" src="/images/auto02.jpg">
+                        <img onclick="openModal();current(12)" class="gallery__img" src="/images/auto02.jpg">
                     </div>
-
                     <div class="gallery__item gallery__item--13">
-                        <img class="gallery__img" src="/images/krajina02.jpg">
+                        <img onclick="openModal();current(13)" class="gallery__img" src="/images/krajina02.jpg">
                     </div>
                     <div class="gallery__item gallery__item--14">
-                        <img class="gallery__img" src="/images/vrchol.jpg">
+                        <img onclick="openModal();current(14)" class="gallery__img" src="/images/vrchol.jpg">
                     </div>
                     <div class="gallery__item gallery__item--15">
-                        <img class="gallery__img" src="/images/krajina05.jpg">
+                        <img onclick="openModal();current(15)" class="gallery__img" src="/images/kamna.jpg">
                     </div>
                     <div class="gallery__item gallery__item--16">
-                        <img class="gallery__img" src="/images/sjezdovka.jpg">
+                        <img onclick="openModal();current(16)" class="gallery__img" src="/images/sjezdovka.jpg">
                     </div>
                     <div class="gallery__item gallery__item--17">
-                        <img class="gallery__img" src="/images/kamna.jpg">
+                        <img onclick="openModal();current(17)" class="gallery__img" src="/images/krajina05.jpg">
                     </div>
                 </div>
-            </div>
+
+                <!-- modal galery -->
+                <div id="Modal" class="modal">
+                    <span  class="close close--modal cursor" onclick="closeModal()">&times;</span> <!--close icon-->
+
+                    <div class="modal__content">
+                
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/budova.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/rolba.jpg">
+                        </div>                    
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/vlek.jpg">
+                        </div>                
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/krajina01.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/krajina04.jpg">
+                        </div>                    
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/zepredu.jpg">
+                        </div>                  
+                        <div class="modal__slide">
+                            <img  class="gallery__img" src="/images/lyze.jpg">
+                        </div>                   
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/obcerstveni.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img  class="gallery__img" src="/images/sloup.jpg">
+                        </div>                  
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/auto01.jpg">
+                        </div>                  
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/krajina03.jpg">
+                        </div>                  
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/auto02.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/krajina02.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/vrchol.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/kamna.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/sjezdovka.jpg">
+                        </div>
+                        <div class="modal__slide">
+                            <img class="gallery__img" src="/images/krajina05.jpg">
+                        </div>
+
+                        <a class="previous previous--modal" onclick="plus(-1)">&#10094;</a> <!-- next,previous buttons -->
+                        <a class="next next--modal" onclick="plus(1)">&#10095;</a>
+         
+                    </div>
+                </div>
+        </div>
         </section>
         <section class="follow section">
             <div class="PC-max-width">
                 <h2 class="subtitle">Sledujte nás na facebooku!</h2>
-                <a href="#" class="follow__link">@tjcenkovice</a>     
+                <a href="https://www.facebook.com/tjcenkovice" class="follow__link">@tjcenkovice</a>     
                 <p class="follow__text">... ať Vám nic neunikne</p>
         </div>
         </section>
 
-    </main>
-    <footer class="footer">
-        
-        <p>Copyright © 2022, Klára Hrnčířová</p>
-        <p>Designed by <a>Freepik</a></p>
-    </footer>
+    
     
     <script>
-        /* Set the width of the side navigation to 250px */
+
+        // Navbar 
         function openNavbar() {
-        document.getElementById("sideNavbar").style.width = "450px";
+            document.getElementById("sideNavbar").style.width = "450px";
         }
-
-        /* Set the width of the side navigation to 0 */
         function closeNavbar() {
-        document.getElementById("sideNavbar").style.width = "0";
+            document.getElementById("sideNavbar").style.width = "0";
         }
 
-        /*slide-gallery*/
-
+        //Slide-gallery - previous, next
         let slideIndex = 1;
         showSlides(slideIndex);
-        // Next/previous controls
+
         function plusSlides(n) {
-        showSlides(slideIndex += n);
+            showSlides(slideIndex += n);
         }
-        // Thumbnail image controls
         function currentSlide(n) {
-        showSlides(slideIndex = n);
+            showSlides(slideIndex = n);
+        }
+        //Slide-gallery - show with dots
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
         }
 
-        function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("slide");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        //Modal - open, close
+        function openModal() {
+        document.getElementById("Modal").style.display = "block";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+        function closeModal() {
+        document.getElementById("Modal").style.display = "none";
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+      
+        //Modal - next, previous
+        var slideNumber = 1;
+        show(slideNumber);
+
+        function plus(x) {
+            show(slideNumber += x);
+        }
+        function current(x) {
+            show(slideNumber = x);
+        }
+        //Modal - show
+        function show(x) {
+            var i;
+            var modalSlide = document.getElementsByClassName("modal__slide");
+            
+            if (x > modalSlide.length) {
+                slideNumber = 1
+            }
+            if (x < 1) {
+                slideNumber = modalSlide.length
+            }
+            for (i = 0; i < modalSlide.length; i++) {
+                modalSlide[i].style.display = "none";
+            }
+            modalSlide[slideNumber-1].style.display = "block";
         }
     </script>
     
-</body>
-</html>
