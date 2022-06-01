@@ -727,6 +727,12 @@ img {
   z-index: -1;
 }
 
+@media screen and (max-width: 425px) {
+  .news {
+    background-image: none;
+    background-color: #336081;
+  }
+}
 @media screen and (min-width: 650px) {
   .box {
     text-align: right;
@@ -1205,14 +1211,13 @@ img {
 }
 
 .flex-container--food {
-  margin: 0 30px;
   align-items: center;
 }
 
 .flex-container__right {
   flex-basis: 40%;
   text-align: justify;
-  margin: 20px 20px 20px 30px;
+  margin: 20px 30px 20px 30px;
 }
 
 .flex-container__left {
@@ -1256,6 +1261,86 @@ img {
     max-width: 700px;
   }
 }
+.contact {
+  background: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
+  box-shadow: 2px 3px 4px #888888;
+}
+.contact__list {
+  background-color: #F7F7F7;
+  color: #4A7C85;
+  box-shadow: 2px 3px 3px rgba(63, 60, 60, 0.5960784314);
+  transition: 0.47s;
+  padding: 50px 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-radius: 60px;
+  font-size: 20px;
+  max-width: 600px;
+}
+.contact__bullet {
+  list-style: none;
+  display: block;
+  margin: 10px;
+}
+.contact__text {
+  color: white;
+  line-height: 1.5em;
+}
+.contact__link {
+  color: #4A7C85;
+  text-decoration: none;
+}
+.contact__text--important {
+  color: #4A7C85;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.subtitle--contact {
+  color: #4A7C85;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.line {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.line--self::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: #4A7C85;
+  left: 0;
+  top: 40px;
+  position: absolute;
+}
+
+@media screen and (max-width: 382px) {
+  .contact {
+    padding: 0;
+    padding-bottom: 10px;
+    box-shadow: none;
+  }
+  .contact__list {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 845px) {
+  .contact__container {
+    display: flex;
+    flex-basis: 50%;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
 .header {
   min-height: 300px;
   background-image: url(/images/header-rectangle.svg);
@@ -1291,6 +1376,10 @@ img {
 
   .header__div-picture {
     display: none;
+  }
+
+  .header__text {
+    padding-top: 35%;
   }
 
   /*.header{

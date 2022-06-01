@@ -5,6 +5,9 @@
 @use "cenik";
 @use "skiareal";
 @use "news";
+@use "contact";
+
+
 
 // Header -------------------------------------------------
 .header{
@@ -43,6 +46,9 @@
     }
     .header__div-picture{
         display: none;
+    }
+    .header__text{
+        padding-top: 35%;
     }
     /*.header{
      

@@ -99,7 +99,13 @@
 }
 
 // Media ---------------------------------------
-
+@media screen and (max-width: 425px){
+    .news{
+        background-image: none;
+        background-color: variables.$blue;
+    
+    }
+}
 @media screen and (min-width: 650px) {
    
     .box{

@@ -1,0 +1,90 @@
+@use "variables";
+@use "basic";
+@use "components";
+
+
+// Contact ---------------------------------
+.contact{
+    background: variables.$primary-color;
+    box-shadow: 2px 3px 4px #888888;
+    
+    
+    &__list{
+        background-color: variables.$background-color;
+        color: variables.$light-blue;
+        box-shadow: 2px 3px 3px #3f3c3c98;
+        transition: 0.47s;
+        padding: 50px 30px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        border-radius: 60px;
+        font-size: 20px;
+        max-width: 600px;  
+    }
+    &__bullet{
+        list-style: none;
+        display: block;
+        margin: 10px;
+    }
+    &__text{
+        color: white;
+        line-height: 1.5em;
+    }
+    &__link{
+        color: variables.$light-blue;
+        text-decoration: none;
+    }
+    &__text--important{
+        color: variables.$light-blue;
+        line-height: 1.5em;
+        text-align: justify;
+    }
+}
+.subtitle--contact{
+    color: variables.$light-blue;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.line{
+    position: relative;
+    margin-bottom: 50px;
+}
+.line--self::after{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: variables.$light-blue;
+  left: 0;
+  top: 40px;
+  position: absolute;
+  
+}
+@media screen and (max-width: 382px) {
+    .contact{
+        padding: 0;
+        padding-bottom: 10px;
+        box-shadow: none;   
+        &__list{
+            box-shadow: none;
+            border-radius: 0;
+            padding: 20px 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+        }
+    }
+    
+}
+@media screen and (min-width: 845px){
+    .contact__container{
+        display: flex;
+        flex-basis: 50%;
+        gap:30px;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        
+    }
+    
+}
