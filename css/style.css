@@ -237,7 +237,7 @@ img {
 }
 .button--about:hover {
   border: none;
-  padding: 14.4px 39.4px;
+  padding: 15px 40px;
   background: linear-gradient(180deg, #336081 -9.8%, #4A7C85 100%);
   color: white;
 }
