@@ -63,6 +63,11 @@
 }
 
 // Media ---------------------------------------------------------------
+@media screen and (max-width: 500px){
+  .food{
+    padding: 60px 20px;
+  }
+}
 @media screen and (max-width: 528px){
   .table--skiareal{
     border-radius: 20px;
