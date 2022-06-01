@@ -1225,6 +1225,20 @@ img {
   flex-basis: 60%;
 }
 
+@media screen and (max-width: 528px) {
+  .table--skiareal {
+    border-radius: 20px;
+    padding: 20px 5px;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+  }
+
+  .flex-container--skiareal {
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding-bottom: 30px;
+  }
+}
 @media screen and (max-width: 790px) {
   .flex-container--skiareal {
     flex-direction: column;

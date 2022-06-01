@@ -20,10 +20,12 @@
 }
 .flex-container--skiareal{
   justify-content: space-between;
+  
 }
 .table--skiareal{
   border-radius: 20px;
   background: variables.$primary-color;
+  
   color: white;
   box-shadow: 3px 3px 5px #6e6e6e97;
   text-align: right;
@@ -61,7 +63,20 @@
 }
 
 // Media ---------------------------------------------------------------
+@media screen and (max-width: 528px){
+  .table--skiareal{
+    border-radius: 20px;
+    padding: 20px 5px;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+  }
+  .flex-container--skiareal{
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding-bottom: 30px;
+  }
 
+}
 @media screen and (max-width: 790px){
   .flex-container--skiareal{
     flex-direction: column;
